@@ -1,6 +1,10 @@
-FROM openjdk:17-jdk-alpine
-ARG JAR_FILE=target/*.jar
+FROM maven:3.8.5-openjdk-17 AS build
+COPY . .
+RUN mvn clean package -DskipTests
 
-COPY ./target/TodoApp_API-0.0.1-SNAPSHOT.jar app.jar
+FROM openjdk:17.0.1-jdk-slim
+
+COPY --from=build /target/TodoApp_API-0.0.1-SNAPSHOT.jar todo.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "jar" , "/app.jar"]
+ENTRYPOINT ["java", "-jar" , "/todo.jar"]
+
