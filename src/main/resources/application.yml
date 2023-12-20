@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sab
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: atul15x
+    password: 12345
+
