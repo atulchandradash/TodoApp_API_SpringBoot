@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/app.css" />
+        <title>Todo App</title>
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body style="background-color: #23c08d;">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"
+                    ><span
+                        class="h3 mb-3 font-weight-bold"
+                        style="
+                            font-family: 'Righteous', cursive;
+                            text-shadow: -4px -1px 4px rgba(150, 150, 150, 5);
+                            color: #fff;
+                            font-size: 1.5rem;
+                        "
+                        >Todo App</span
+                    ></a
+                >
+
+            </div>
+        </nav>
+
+        <div class="container">
+            <section class="main_section">
+                <div>
+                    <div  class="date">
+                        <h1 id="current-day" ></h1>
+                        <p id="current-fullday"></p>
+                    </div>
+                    <form >
+                        <div class="input-group mb-3">
+                            <input id="todo" name="todo" type="text" class="form-control" placeholder="Write Todos" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn  btn-outline-success" type="submit" onclick="addTodos()" >Add Todo</button>
+                        </div>
+                    </form>
+                    <div class="tasks">
+                        <ol id="dataContainer"></ol>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/ApiReq.js"></script>
+    </body>
+</html>
