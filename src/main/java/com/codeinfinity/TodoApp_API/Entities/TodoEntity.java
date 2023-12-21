@@ -8,4 +8,8 @@ public class TodoEntity {
     private Integer id;
     private String todo;
 
+    private boolean complete;
+
+    private String created_at;
+
 }

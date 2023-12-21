@@ -5,3 +5,8 @@ spring:
     username: atul15x
     password: 12345
 
+server:
+  port: 8080
+
+
+

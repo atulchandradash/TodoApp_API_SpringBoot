@@ -14,4 +14,6 @@ public interface TodoService {
     void addTodos(TodoEntity todo);
 
     void deleteTodos(Integer id);
+
+    void todoIsCompleted(Integer id);
 }

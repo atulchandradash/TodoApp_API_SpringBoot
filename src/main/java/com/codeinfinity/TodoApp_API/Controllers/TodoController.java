@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/api/todos")
 public class TodoController {
@@ -69,6 +70,22 @@ public class TodoController {
         try
         {
             todoService.deleteTodos(id);
+            return Result.success();
+
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+            return  Result.error("操作失败 " + e);
+        }
+    }
+
+
+    @PutMapping("/{id}")
+    public Result todoIsCompleted(@PathVariable Integer id)
+    {
+        try
+        {
+            todoService.todoIsCompleted(id);
             return Result.success();
 
         }catch (Exception e)

@@ -33,4 +33,9 @@ public class TodoServiceImpl implements TodoService {
     public void deleteTodos(Integer id) {
         todoMapper.deleteTodos(id);
     }
+
+    @Override
+    public void todoIsCompleted(Integer id) {
+        todoMapper.todoIsCompleted(id);
+    }
 }
